@@ -23,5 +23,5 @@ To add an existing user to an existing group:
 
 To copy the groups USER1 into USER2:
 
-    GROUPS=$(awk -F: "{ if (\$4 ~ /$USER1/) print \$1  }" ORS=',' /etc/group | sed 's/,$//')
-    usermod -G $GROUPS -a $USER2
+    G=$(awk -F: "{ if (\$4 ~ /$USER1/) print \$1 }" ORS=',' /etc/group | sed 's/,$//')
+    usermod -G $G -a $USER2
