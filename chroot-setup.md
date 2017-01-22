@@ -29,8 +29,9 @@ Use tgz
 https://golang.org/dl/
 ```
 cat << 'EOF' > /etc/profile.d/golang.sh && chmod 755 /etc/profile.d/golang.sh
-export PATH=$PATH:/opt/go/bin
-export GOROOT=$HOME/go
+export GOROOT=/opt/go
+export GOHOME=$HOME/go
+export PATH=$PATH:$GOROOT/bin
 EOF
 ```
 
