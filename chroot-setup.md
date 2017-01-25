@@ -1,7 +1,7 @@
 # chroot-setup
 
 ## packages
-`apt-get install tmux git vim-nox tree silversearcher-ag`
+`apt-get install tmux git vim-nox tree silversearcher-ag bzip2`
 
 ## single user setup
 
@@ -57,6 +57,13 @@ EOF
 
 ## python
 Use the anaconda distribution (http://conda.pydata.org/miniconda.html).
+
+```
+sh miniconda.sh -b -p /opt/python
+cat << 'EOF' > /etc/profile.d/python.sh && chmod 755 /etc/profile.d/python.sh
+export PATH=$PATH:/opt/python/bin
+EOF
+```
 
 ### from source:
 Download from https://www.python.org/downloads/ and build from source
