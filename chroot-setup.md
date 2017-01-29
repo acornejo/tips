@@ -59,7 +59,8 @@ EOF
 Use the anaconda distribution (http://conda.pydata.org/miniconda.html).
 
 ```
-sh miniconda.sh -b -p /opt/python
+sh miniconda-version.sh -b -p /opt/python
+
 cat << 'EOF' > /etc/profile.d/python.sh && chmod 755 /etc/profile.d/python.sh
 export PATH=$PATH:/opt/python/bin
 EOF
