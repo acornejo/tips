@@ -58,6 +58,15 @@ EOF
 ## python
 Use the anaconda distribution (http://conda.pydata.org/miniconda.html).
 
+```
+miniconda-version.sh -b -p /opt/python
+
+cat << 'EOF' > /etc/profile.d/python.sh && chmod 755 /etc/profile.d/python.sh
+export PYTHON_HOME=/opt/python
+export PATH=$PATH:$PYTHON_HOME/bin
+EOF
+```
+
 ### from source:
 Download from https://www.python.org/downloads/ and build from source
 libraries need for python:
