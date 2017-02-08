@@ -9,6 +9,9 @@
 // Reset all settings
 term_.prefs_.resetAll()
 
+// Disable audible bell
+term_.prefs_.set('audible-bell-sound', '')
+
 // Set default terminal
 term_.prefs_.set('environment', { TERM: "xterm-256color" })
 
